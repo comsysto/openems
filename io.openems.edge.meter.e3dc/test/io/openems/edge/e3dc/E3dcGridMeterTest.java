@@ -1,5 +1,6 @@
 package io.openems.edge.e3dc;
 
+import io.openems.edge.meter.api.MeterType;
 import org.junit.Test;
 
 import io.openems.edge.common.test.AbstractComponentTest.TestCase;
@@ -9,19 +10,20 @@ import io.openems.edge.common.test.DummyConfigurationAdmin;
 
 public class E3dcGridMeterTest {
 
-	private static final String COMPONENT_ID = "component0";
-	private static final String MODBUS_ID = "modbus0";
+    private static final String COMPONENT_ID = "component0";
+    private static final String MODBUS_ID = "modbus0";
 
-	@Test
-	public void test() throws Exception {
-		new ComponentTest(new E3dcGridMeterImpl()) //
-				.addReference("cm", new DummyConfigurationAdmin()) //
-				.addReference("setModbus", new DummyModbusBridge(MODBUS_ID)) //
-				.activate(MyConfig.create() //
-						.setId(COMPONENT_ID) //
-						.setModbusId(MODBUS_ID) //
-						.build())
-				.next(new TestCase());
-	}
+    @Test
+    public void test() throws Exception {
+        new ComponentTest(new E3dcGridMeterImpl()) //
+            .addReference("cm", new DummyConfigurationAdmin()) //
+            .addReference("setModbus", new DummyModbusBridge(MODBUS_ID)) //
+            .activate(MyConfig.create() //
+                .setId(COMPONENT_ID) //
+                .setModbusId(MODBUS_ID) //
+                .setType(MeterType.GRID)
+                .build())
+            .next(new TestCase());
+    }
 
 }

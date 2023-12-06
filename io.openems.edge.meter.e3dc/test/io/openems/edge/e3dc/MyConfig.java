@@ -12,6 +12,8 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 		private String modbusId = null;
 		private int modbusUnitId;
 
+		private MeterType type;
+
 		private Builder() {
 		}
 
@@ -29,6 +31,12 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 			this.modbusUnitId = modbusUnitId;
 			return this;
 		}
+
+		public Builder setType(MeterType type) {
+			this.type = type;
+			return this;
+		}
+
 
 		public MyConfig build() {
 			return new MyConfig(this);
@@ -53,7 +61,7 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 
 	@Override
 	public MeterType type() {
-		return null;
+		return this.builder.type;
 	}
 
 	@Override
