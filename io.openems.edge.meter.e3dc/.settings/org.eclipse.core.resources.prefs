@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/io/openems/edge/e3dc/Config.java=UTF-8
+encoding//src/io/openems/edge/e3dc/MyModbusDevice.java=UTF-8
+encoding//src/io/openems/edge/e3dc/MyModbusDeviceImpl.java=UTF-8
+encoding//test/io/openems/edge/e3dc/MyConfig.java=UTF-8
+encoding//test/io/openems/edge/e3dc/MyModbusDeviceTest.java=UTF-8
+encoding/<project>=UTF-8
+encoding/bnd.bnd=UTF-8
+encoding/readme.adoc=UTF-8
