@@ -21,4 +21,4 @@ if [[ $(java -version 2>&1) != *"17"* ]]; then
 fi
 
 
-java -XX:+ExitOnOutOfMemoryError -Dfelix.cm.dir="$FELIX_CM_DIR" -Djava.util.concurrent.ForkJoinPool.common.parallelism=100 -jar "$PATH_TO_OPENEMS_EDGE_JAR"
+java -agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n -XX:+ExitOnOutOfMemoryError -Dfelix.cm.dir="$FELIX_CM_DIR" -Djava.util.concurrent.ForkJoinPool.common.parallelism=100 -jar "$PATH_TO_OPENEMS_EDGE_JAR"
