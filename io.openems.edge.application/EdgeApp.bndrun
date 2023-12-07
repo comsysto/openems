@@ -145,6 +145,7 @@
 	bnd.identity;id='io.openems.edge.meter.bgetech',\
 	bnd.identity;id='io.openems.edge.meter.carlo.gavazzi.em300',\
 	bnd.identity;id='io.openems.edge.meter.discovergy',\
+	bnd.identity;id='io.openems.edge.meter.e3dc',\
 	bnd.identity;id='io.openems.edge.meter.janitza',\
 	bnd.identity;id='io.openems.edge.meter.kdk',\
 	bnd.identity;id='io.openems.edge.meter.microcare.sdm630',\
@@ -307,6 +308,7 @@
 	io.openems.edge.meter.bgetech;version=snapshot,\
 	io.openems.edge.meter.carlo.gavazzi.em300;version=snapshot,\
 	io.openems.edge.meter.discovergy;version=snapshot,\
+	io.openems.edge.meter.e3dc;version=snapshot,\
 	io.openems.edge.meter.janitza;version=snapshot,\
 	io.openems.edge.meter.kdk;version=snapshot,\
 	io.openems.edge.meter.microcare.sdm630;version=snapshot,\
@@ -369,7 +371,6 @@
 	io.openems.wrapper.retrofit-converter-scalars;version=snapshot,\
 	io.openems.wrapper.retrofit2;version=snapshot,\
 	io.openems.wrapper.sdnotify;version=snapshot,\
-	io.reactivex.rxjava3.rxjava;version='[3.1.8,3.1.9)',\
 	javax.jmdns;version='[3.4.1,3.4.2)',\
 	javax.xml.soap-api;version='[1.4.0,1.4.1)',\
 	org.apache.commons.commons-csv;version='[1.10.0,1.10.1)',\
@@ -403,4 +404,5 @@
 	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
 	org.owasp.encoder;version='[1.2.3,1.2.4)',\
 	reactive-streams;version='[1.0.4,1.0.5)',\
-	rrd4j;version='[3.9.0,3.9.1)'
+	rrd4j;version='[3.9.0,3.9.1)',\
+	io.reactivex.rxjava3.rxjava;version='[3.1.6,3.1.7)'
