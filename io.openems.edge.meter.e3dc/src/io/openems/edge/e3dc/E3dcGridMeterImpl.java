@@ -76,7 +76,7 @@ public class E3dcGridMeterImpl extends AbstractOpenemsModbusComponent implements
 
     @Override
     public String debugLog() {
-        return "L:"+this.getActivePower().asString();
+        return "L:" + this.getActivePower().asString();
     }
 
 	@Override
