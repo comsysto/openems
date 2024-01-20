@@ -1,6 +1,7 @@
 package io.openems.edge.e3dc;
 
 import io.openems.edge.bridge.modbus.api.element.SignedWordElement;
+import io.openems.edge.bridge.modbus.api.element.UnsignedWordElement;
 import io.openems.edge.bridge.modbus.api.task.FC3ReadRegistersTask;
 import io.openems.edge.common.taskmanager.Priority;
 import io.openems.edge.meter.api.ElectricityMeter;
@@ -66,12 +67,16 @@ public class E3dcGridMeterImpl extends AbstractOpenemsModbusComponent implements
         super.deactivate();
     }
 
+    /*+
+     * Define the Modbus Protocol for E3dcGridMeter.
+     */
     @Override
     protected ModbusProtocol defineModbusProtocol() throws OpenemsException {
         return new ModbusProtocol(this,
-			new FC3ReadRegistersTask(40074,
+			new FC3ReadRegistersTask(40003,
 				Priority.HIGH,
-				m(ElectricityMeter.ChannelId.ACTIVE_POWER, new SignedWordElement(40074))));
+				m(ElectricityMeter.ChannelId.ACTIVE_POWER, new UnsignedWordElement(40074)))//
+             );
     }
 
     @Override
