@@ -1,3 +1,5 @@
 = io.openems.edge.e3dc
 
 https://github.com/OpenEMS/openems/tree/develop/io.openems.edge.e3dc[Source Code icon:github[]]
+
+E3DC Modbus Regiter description https://github.com/Brovning/e3dc/blob/main/README.md
